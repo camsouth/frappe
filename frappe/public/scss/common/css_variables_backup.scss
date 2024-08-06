@@ -29,7 +29,7 @@ $disabled-input-height: 22px;
 	// SVG Colors
 	--icon-fill: transparent;
 	--icon-fill-bg: var(--fg-color);
-	--icon-stroke: var(--blue-800);
+	--icon-stroke: var(--gray-800);
 
 	// Background Text Color Pairs
 	--bg-blue: var(--blue-100);
@@ -75,70 +75,68 @@ $disabled-input-height: 22px;
 	--alert-bg-success: var(--green-100);
 
 	// Layout Colors
-	// --bg-color: white;
-	// --fg-color: white;
-	--bg-color: var(--violet-100);
-	--fg-color: var(--violet-100);
+	--bg-color: white;
+	--fg-color: white;
 	--subtle-accent: var(--gray-50);
-	--subtle-fg: var(--blue-300);
-	--navbar-bg: var(--blue-600);
-	--fg-hover-color: var(--blue-300);
+	--subtle-fg: var(--gray-100);
+	--navbar-bg: white;
+	--fg-hover-color: var(--gray-100);
 	--card-bg: var(--fg-color);
 	--disabled-text-color: var(--gray-600);
 	--disabled-control-bg: var(--gray-50);
-	--control-bg: var(--blue-300);
-	--control-bg-on-gray: var(--blue-200);
+	--control-bg: var(--gray-100);
+	--control-bg-on-gray: var(--gray-200);
 	--awesomebar-focus-bg: var(--fg-color);
-	--modal-bg: var(--violet-100);
+	--modal-bg: white;
 	--toast-bg: var(--modal-bg);
-	--popover-bg: var(--blue-300);;
+	--popover-bg: white;
 
 	--awesomplete-hover-bg: var(--control-bg);
 
 	// Button Colors
-	--btn-primary: var(--blue-900);
-	--btn-default-bg: var(--blue-100);
-	--btn-default-hover-bg: var(--blue-300);
+	--btn-primary: var(--gray-900);
+	--btn-default-bg: var(--gray-100);
+	--btn-default-hover-bg: var(--gray-300);
 
 	// Border Colors
-	--border-primary: var(--blue-900);
+	--border-primary: var(--gray-900);
 
 	// Other Colors
-	--sidebar-select-color: var(--blue-300);
+	--sidebar-select-color: var(--gray-100);
 
-	--scrollbar-thumb-color: var(--blue-400);
-	--scrollbar-track-color: var(--blue-200);
+	--scrollbar-thumb-color: var(--gray-400);
+	--scrollbar-track-color: var(--gray-200);
 
-	--shadow-inset: inset 0px -1px 0px var(--blue-300);
-	--border-color: var(--blue-200);
-	--dark-border-color: var(--blue-300);
-	--table-border-color: var(--blue-200);
-	--highlight-color: var(--blue-300);
+	--shadow-inset: inset 0px -1px 0px var(--gray-300);
+	--border-color: var(--gray-200);
+	--dark-border-color: var(--gray-300);
+	--table-border-color: var(--gray-200);
+	--highlight-color: var(--gray-50);
 	--yellow-highlight-color: var(--yellow-50);
 
-	--btn-group-border-color: var(--blue-300);
+	--btn-group-border-color: var(--gray-300);
 
-	--placeholder-color: var(--blue-300);
+	--placeholder-color: var(--gray-50);
 
 	--highlight-shadow: 1px 1px 10px var(--blue-50), 0px 0px 4px var(--blue-600);
 
 	// code block
-	--code-block-bg: var(--blue-900);
-	--code-block-text: var(--blue-400);
+	--code-block-bg: var(--gray-900);
+	--code-block-text: var(--gray-400);
 
-	--primary-color: var(--blue-900);
+	--primary-color: var(--gray-900);
 	--btn-height: 28px;
 
 	// input
 	--input-height: #{$input-height};
-	--input-disabled-bg: var(--blue-200);
+	--input-disabled-bg: var(--gray-200);
 
 	// Checkbox
 	--checkbox-right-margin: var(--margin-xs);
 	--checkbox-size: 14px;
 	--checkbox-color: var(--neutral-black);
 
-	--checkbox-focus-shadow: 0 0 0 2px var(--blue-300);
+	--checkbox-focus-shadow: 0 0 0 2px var(--gray-300);
 	--checkbox-gradient: linear-gradient(180deg, var(--primary) -124.51%, var(--primary) 100%);
 	--checkbox-disabled-gradient: linear-gradient(
 		180deg,
@@ -147,7 +145,7 @@ $disabled-input-height: 22px;
 	);
 
 	// switch
-	--switch-bg: var(--blue-300);
+	--switch-bg: var(--gray-300);
 
 	// "diff" colors
 	--diff-added: var(--green-100);
