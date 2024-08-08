@@ -117,7 +117,7 @@ body {
 	padding: 7px;
 	border-radius: var(--border-radius-lg);
 	height: 100%;
-	background-color: var(--card-bg);
+	background-color: var(--new-card-bg);
 
 	.btn {
 		box-shadow: none;
@@ -348,7 +348,7 @@ body {
 
 	&.onboarding-widget-box {
 		margin-bottom: var(--margin-2xl);
-		background-color: var(--bg-color);
+		background-color: var(--new-card-bg);
 		border-bottom: 1px solid var(--border-color);
 		border-radius: 0;
 
@@ -432,7 +432,7 @@ body {
 
 			.onboarding-step {
 				@include flex(flex, space-between, center, null);
-				border-radius: var(--border-radius);
+				// border-radius: var(--border-radius);
 				padding: 5px 8px;
 				@include get_textstyle("base", "regular");
 				max-width: 350px;
@@ -981,12 +981,14 @@ body {
 			}
 
 			.layout-side-section {
-				padding-right: 15px;
+				padding-right: 0;
+        margin-top: 1rem;
 			}
 
 			.layout-main-section {
-				border: 1px solid var(--border-color);
+				// border: 1px solid var(--border-color);
 				padding: var(--padding-md);
+        margin-top: var(--padding-sm);
 				margin-bottom: var(--margin-sm);
 
 				&.edit-mode {
@@ -1010,13 +1012,15 @@ body {
 	.layout-main-section-wrapper {
 		margin-top: -5px;
 		padding-top: 5px;
+    background-color: var(--gray-50);
 	}
 
 	.layout-main-section {
-		background-color: var(--fg-color);
+		background-color: var(--layout-main-bg-color);
 		box-shadow: none;
-		border-radius: var(--border-radius-lg);
+		// border-radius: var(--border-radius-lg);
 		padding: var(--padding-sm);
+    margin: 1.1rem 1rem 1.1rem 1rem;
 	}
 
 	.workspace-footer {
@@ -1075,6 +1079,7 @@ body {
 			overflow: hidden;
 			padding: 3px 0px 3px 8px;
 			flex: 1;
+      font-size: 1.1rem;
 		}
 	}
 
@@ -1174,6 +1179,7 @@ body {
 
 	.codex-editor {
 		min-height: 630px;
+    background-color: var(--new-card-bg);
 
 		.codex-editor__redactor {
 			display: flex;
@@ -1443,6 +1449,7 @@ body {
 
 		svg {
 			fill: none;
+      stroke: var(--blue-700);
 		}
 
 		.ce-toolbar {

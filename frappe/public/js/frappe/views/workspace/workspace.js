@@ -1,6 +1,8 @@
 import EditorJS from "@editorjs/editorjs";
 import Undo from "editorjs-undo";
 
+const REMOVABLE_SIDEBAR_ITEMS = ["Support", "Users", "Website", "Tools", "Integrations", "Build"];
+
 frappe.standard_pages["Workspaces"] = function () {
 	var wrapper = frappe.container.add_page("Workspaces");
 
@@ -137,6 +139,8 @@ frappe.views.Workspace = class Workspace {
 		item.indicator_color =
 			item.indicator_color || this.indicator_colors[Math.floor(Math.random() * 12)];
 
+    item.is_hidden = REMOVABLE_SIDEBAR_ITEMS.includes(item.name) ? 1 : 0;  
+
 		return $(`
 			<div
 				class="sidebar-item-container ${item.is_editable ? "is-draggable" : ""}"
@@ -201,25 +205,25 @@ frappe.views.Workspace = class Workspace {
 			`<div class="standard-sidebar-section nested-container" data-title="${title}"></div>`
 		);
 
-		let $title = $(`<button class="btn-reset standard-sidebar-label">
-			<span>${frappe.utils.icon("es-line-down", "xs")}</span>
-			<span class="section-title">${__(title)}<span>
-		</div>`).appendTo(sidebar_section);
-		$title.attr({
-			"aria-label": __("{0}: {1}", [__("Toggle Section"), __(title)]),
-			"aria-expanded": "true",
-		});
+		// let $title = $(`<button class="btn-reset standard-sidebar-label">
+		// 	<span>${frappe.utils.icon("es-line-down", "xs")}</span>
+		// 	<span class="section-title">${__(title)}<span>
+		// </div>`).appendTo(sidebar_section);
+		// $title.attr({
+		// 	"aria-label": __("{0}: {1}", [__("Toggle Section"), __(title)]),
+		// 	"aria-expanded": "true",
+		// });
 		this.prepare_sidebar(root_pages, sidebar_section, this.sidebar);
 
-		$title.on("click", (e) => {
-			const $e = $(e.target);
-			const href = $e.find("span use").attr("href");
-			const isCollapsed = href === "#es-line-down";
-			let icon = isCollapsed ? "#es-line-right-chevron" : "#es-line-down";
-			$e.find("span use").attr("href", icon);
-			$e.parent().find(".sidebar-item-container").toggleClass("hidden");
-			$e.attr("aria-expanded", String(!isCollapsed));
-		});
+		// $title.on("click", (e) => {
+		// 	const $e = $(e.target);
+		// 	const href = $e.find("span use").attr("href");
+		// 	const isCollapsed = href === "#es-line-down";
+		// 	let icon = isCollapsed ? "#es-line-right-chevron" : "#es-line-down";
+		// 	$e.find("span use").attr("href", icon);
+		// 	$e.parent().find(".sidebar-item-container").toggleClass("hidden");
+		// 	$e.attr("aria-expanded", String(!isCollapsed));
+		// });
 
 		if (Object.keys(root_pages).length === 0) {
 			sidebar_section.addClass("hidden");
