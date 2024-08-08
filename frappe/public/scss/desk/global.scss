@@ -474,8 +474,9 @@ kbd {
 		@include flex(flex, null, center, null);
 		@include get_textstyle("base", "regular");
 		padding: 8px 12px;
-		margin-bottom: 2px;
-		border-radius: var(--border-radius);
+		// margin-bottom: 2px;
+		// border-radius: var(--border-radius);
+    // border-right: .25rem solid var(--sidebar-unselect-color);
 		overflow: hidden;
 		cursor: pointer;
 
@@ -489,17 +490,20 @@ kbd {
 
 		&:focus-within {
 			background-color: var(--sidebar-select-color);
+      border-right: .25rem solid var(--sidebar-select-border-color);
 			outline: 0;
 			text-decoration: none;
 		}
 
 		&:hover {
-			background-color: var(--sidebar-select-color);
+			// background-color: var(--sidebar-select-color);
+      border-right: .25rem solid var(--sidebar-hover-color);
 			text-decoration: none;
 		}
 
 		&.selected {
 			background-color: var(--sidebar-select-color);
+      border-right: .25rem solid var(--sidebar-select-border-color);
 		}
 
 		> a {

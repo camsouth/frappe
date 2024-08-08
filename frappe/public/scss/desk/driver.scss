@@ -1,12 +1,21 @@
 @import "~driver.js/src/driver.scss";
 
+button, .btn {
+  border-radius: unset !important;
+}
+
+// button.btn-primary, button.btn-default, .btn-group {
+//     color: var(--text-on-white) !important;
+//     background-color: var(--blue-700) !important;
+// }
+
 div#driver-popover-item {
 	$text-color: var(--text-color);
 	$popover-bg: var(--card-bg);
 
 	padding: var(--padding-md) var(--padding-lg);
 	max-width: 350px;
-	border-radius: var(--border-radius-md);
+	// border-radius: var(--border-radius-md);
 	box-shadow: var(--shadow-md);
 
 	.driver-popover-title {
@@ -44,6 +53,7 @@ div#driver-popover-item {
 		button.driver-prev-btn {
 			@extend .btn-secondary;
 			margin-left: var(--margin-sm);
+      background-color: unset;
 		}
 
 		button.driver-close-btn {
